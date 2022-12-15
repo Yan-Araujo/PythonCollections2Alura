@@ -83,13 +83,24 @@ def aprendendo_sobre_dicionarios():
 
     print("Outra Forma de criar dicionários: varivável = dict(key=value)")
     usuario_e_idade = dict(Yan=27, Mayara=27, Fabio=51)
+    usuario_e_idade2 = dict(Fabiana=53, Ruzinete=78)
     print("new_dictionary = dict(Yan=27, Mayara=27, Fabio=51) => ", usuario_e_idade, "\n")
 
     print("Alterando elementos em um dicionário: \n")
+
     usuario_e_idade["Yasmin"] = 15
     print("Adicionar uma nova chave ou alterar uma chave existente: dict_name[key] = value => ", usuario_e_idade)
+
     del usuario_e_idade["Fabio"]
     print("Remover uma chave de um dicionário: del dict_name['key'] => ", usuario_e_idade)
+
+    usuario_e_idade.pop("Yasmin", "Usuário não encontrado")
+    print(f"Remove, casos exista, uma chave do dicionário usando o comando: dict_name.pop(key, message). Caso não "
+          f"exista, retorna a mensagem => {usuario_e_idade}")
+
+    usuario_e_idade.update(usuario_e_idade2)
+    print(f"Juntar 2 dicionários: dict_name1.update(dict_name2) => {usuario_e_idade}")
+
     print("Transformando um dicionário em uma lista: list(dict_name) => ", list(usuario_e_idade), "\n")
 
     print("Imprimindo as chaves e seus valores: ")
@@ -220,7 +231,7 @@ def usando_todo_conteudo_do_curso():
     analisa_frequencia_de_letras(texto2)
 
 
-usando_todo_conteudo_do_curso()
+aprendendo_sobre_dicionarios()
 
 
 
